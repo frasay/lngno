@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Why the LNG Plan Makes No Sense</title>
+<meta content="Why the LNG Plan Makes No Sense" property="og:title"/>
+<meta content="An educational breakdown of New Zealand's energy crisis and why LNG is the wrong answer." property="og:description"/>
+<meta content="website" property="og:type"/>
+<script src="assets/script_173efc9f.js"></script>
+<script src="assets/script_ef48f73c.js"></script>
+<link href="assets/style_683c73ea.css" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+        .fade-section { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-section.visible { opacity: 1; transform: translateY(0); }
+
+        .stat-number { font-variant-numeric: tabular-nums; }
+
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        .faultline-card {
+            border: 2px solid #000;
+            transition: background 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+        .faultline-card:hover {
+            background: #000;
+            color: #fff;
+        }
+        .faultline-card:hover .faultline-num { color: #ef4444; }
+
+        .comparison-row:nth-child(even) { background: #f5f5f5; }
+
+        .expand-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+        .expand-content.open { max-height: 2000px; }
+
+        .ticker {
+            animation: tickerScroll 30s linear infinite;
+        }
+        @keyframes tickerScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        ::selection { background: #000; color: #fff; }
+    </style>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'sans': ['Inter', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'] },
+                    colors: { 'accent': '#dc2626' }
+                }
+            }
+        }
+    </script>
+<script>
+                window.load_data_from_csv = (filename) => {
+                    // Implementation needed when code is downloaded
+                };
+
+                window.save_data_to_csv = (filename, data) => {
+                    // Implementation needed when code is downloaded
+                };
+
+                window.call_llm = (system_prompt, user_messages, json_fields) => {
+                    // Implementation needed when code is downloaded
+                };
+            </script></head>
+<body class="bg-white text-black">
+<nav class="fixed top-0 left-0 w-full bg-white z-50 border-b-2 border-black">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<a class="text-sm font-bold tracking-widest uppercase" href="#top">LNG<span class="text-accent">?</span> NO.</a>
+<div class="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest uppercase">
+<a class="nav-link" href="#shock">The Shock</a>
+<a class="nav-link" href="#faultlines">Faultlines</a>
+<a class="nav-link" href="#numbers">Numbers</a>
+<a class="nav-link" href="#compare">Compare</a>
+<a class="nav-link" href="#solutions">Solutions</a>
+<a class="nav-link" href="#sources">Sources</a>
+</div>
+<button class="md:hidden text-xl" id="menuToggle"><i class="fas fa-bars"></i></button>
+</div>
+<div class="hidden md:hidden border-t-2 border-black bg-white" id="mobileMenu">
+<div class="flex flex-col px-6 py-4 gap-4 text-xs font-bold tracking-widest uppercase">
+<a class="mobile-nav" href="#shock">The Shock</a>
+<a class="mobile-nav" href="#faultlines">Faultlines</a>
+<a class="mobile-nav" href="#numbers">Numbers</a>
+<a class="mobile-nav" href="#compare">Compare</a>
+<a class="mobile-nav" href="#solutions">Solutions</a>
+<a class="mobile-nav" href="#sources">Sources</a>
+</div>
+</div>
+</nav>
+<section class="min-h-screen flex flex-col justify-center px-6 pt-20 border-b-2 border-black" id="top">
+<div class="max-w-5xl mx-auto w-full">
+<p class="text-xs font-bold tracking-widest uppercase mb-8 text-accent">Rewiring Aotearoa · Sapere Research Group · 2026</p>
+<h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-none tracking-tight mb-8">
+                WHY THE<br/>LNG PLAN<br/>MAKES<br/><span class="text-accent">NO SENSE.</span>
+</h1>
+<p class="text-lg sm:text-xl font-light max-w-xl leading-relaxed mb-12">
+                New Zealand had an energy shock in 2024. The government's proposed fix—importing Liquified Natural Gas—is expensive, slow, and unnecessary. Here's why.
+            </p>
+<a class="inline-block border-2 border-black px-8 py-4 text-sm font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all duration-300" href="#shock">
+                Read the evidence <i class="fas fa-arrow-down ml-2"></i>
+</a>
+</div>
+</section>
+<div class="overflow-hidden border-b-2 border-black py-3 bg-black text-white">
+<div class="ticker whitespace-nowrap flex gap-16 text-xs font-bold tracking-widest uppercase">
+<span>$800/MWh PEAK WHOLESALE PRICE ·</span>
+<span>731 PJ REMAINING GAS RESERVES ·</span>
+<span>$900M CHEAPER WITHOUT LNG ·</span>
+<span>55 PJ INDUSTRIAL GAS DEMAND ·</span>
+<span>88% ELECTRIFICATION NEEDS NO GRID UPGRADE ·</span>
+<span>$800/MWh PEAK WHOLESALE PRICE ·</span>
+<span>731 PJ REMAINING GAS RESERVES ·</span>
+<span>$900M CHEAPER WITHOUT LNG ·</span>
+<span>55 PJ INDUSTRIAL GAS DEMAND ·</span>
+<span>88% ELECTRIFICATION NEEDS NO GRID UPGRADE ·</span>
+</div>
+</div>
+<section class="py-24 px-6 border-b-2 border-black fade-section" id="shock">
+<div class="max-w-5xl mx-auto">
+<p class="text-xs font-bold tracking-widest uppercase mb-4 text-accent">01 / The Crisis</p>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-12">
+                THE 2024<br/>ENERGY SHOCK
+            </h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<p class="text-lg font-light leading-relaxed mb-6">
+                        In August 2024, wholesale electricity prices in New Zealand hit <strong class="font-bold">$800 per megawatt-hour</strong>—a price so extreme it threatened businesses, drove up consumer bills, and exposed deep structural failures in the energy system.
+                    </p>
+<p class="text-lg font-light leading-relaxed mb-6">
+                        The cause wasn't mysterious. It was a perfect storm: <strong class="font-bold">declining domestic gas production</strong> collided with <strong class="font-bold">low hydro lake inflows</strong> during a dry winter. The gas-fired power stations that normally cover these dry periods simply didn't have enough fuel.
+                    </p>
+<p class="text-lg font-light leading-relaxed">
+                        Gas reserves had already dropped by <strong class="font-bold">109 petajoules</strong> in recent revisions. The system that once had comfortable margins was running on empty.
+                    </p>
+</div>
+<div>
+<div class="w-full border-2 border-black p-4 bg-white" id="priceChart" style="min-height:320px;"></div>
+<p class="text-xs mt-2 text-gray-500 font-light">Illustrative wholesale electricity price trajectory, 2024</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 border-b-2 border-black fade-section" id="faultlines">
+<div class="max-w-5xl mx-auto">
+<p class="text-xs font-bold tracking-widest uppercase mb-4 text-accent">02 / The Diagnosis</p>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
+                THREE<br/>FAULTLINES
+            </h2>
+<p class="text-lg font-light max-w-2xl mb-12">
+                The Sapere report identifies three structural weaknesses in New Zealand's energy system. Each is distinct. Each needs a different fix. LNG addresses none of them well.
+            </p>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="faultline-card p-8" onclick="toggleExpand('f1')">
+<p class="faultline-num text-6xl font-black text-accent mb-4">01</p>
+<h3 class="text-xl font-bold mb-3">GAS CAN'T FLEX ANYMORE</h3>
+<p class="text-sm font-light leading-relaxed mb-4">
+                        Gas-fired power stations used to ramp up in dry years to cover low hydro generation. But declining production capacity means gas can no longer play this role.
+                    </p>
+<p class="text-xs font-bold tracking-widest uppercase"><i class="fas fa-plus mr-1"></i> More</p>
+</div>
+<div class="faultline-card p-8" onclick="toggleExpand('f2')">
+<p class="faultline-num text-6xl font-black text-accent mb-4">02</p>
+<h3 class="text-xl font-bold mb-3">INDUSTRY DEPENDS ON DYING GAS</h3>
+<p class="text-sm font-light leading-relaxed mb-4">
+                        55 petajoules per year of industrial process heat runs on gas. As supply declines, these industries face a choice: switch fuels or shut down.
+                    </p>
+<p class="text-xs font-bold tracking-widest uppercase"><i class="fas fa-plus mr-1"></i> More</p>
+</div>
+<div class="faultline-card p-8" onclick="toggleExpand('f3')">
+<p class="faultline-num text-6xl font-black text-accent mb-4">03</p>
+<h3 class="text-xl font-bold mb-3">NO CONTRACT MARKET EXISTS</h3>
+<p class="text-sm font-light leading-relaxed mb-4">
+                        Businesses have no way to buy long-term, firm-priced electricity contracts. When prices spike, they're exposed to the full volatility of the spot market.
+                    </p>
+<p class="text-xs font-bold tracking-widest uppercase"><i class="fas fa-plus mr-1"></i> More</p>
+</div>
+</div>
+<div class="expand-content border-2 border-black border-t-0 p-8 bg-gray-50" id="f1">
+<h4 class="font-bold text-lg mb-3">Faultline 01: The Flexibility Gap</h4>
+<p class="font-light leading-relaxed mb-4">Gas production from fields like Pohokura and Maui has been declining steadily. Recent reserve revisions removed 109PJ from known reserves. The remaining 731PJ must serve both electricity generation (25PJ/year) and industrial/commercial use (55PJ/year).</p>
+<p class="font-light leading-relaxed mb-4">In the past, gas-fired generators could increase output by 3–4 TWh in a dry year. That flexibility is disappearing. By the early 2030s, it may be gone entirely.</p>
+<p class="font-light leading-relaxed"><strong>The real solution:</strong> Renewable overbuild (wind and solar) combined with diesel as a short-term backup fuel. Diesel peakers can be online within 2 years; new wind farms within 3–5 years.</p>
+</div>
+<div class="expand-content border-2 border-black border-t-0 p-8 bg-gray-50" id="f2">
+<h4 class="font-bold text-lg mb-3">Faultline 02: Industrial Gas Dependency</h4>
+<p class="font-light leading-relaxed mb-4">New Zealand's industrial sector uses approximately 55PJ of gas per year for process heat—everything from dairy processing to timber drying to food manufacturing.</p>
+<p class="font-light leading-relaxed mb-4">As gas supply contracts, these industries face deindustrialisation by the late 2030s unless they switch to alternative fuels. 88% of electrification projects need no network upgrades at all.</p>
+<p class="font-light leading-relaxed"><strong>The real solution:</strong> Accelerated fuel switching to electricity, biomass, and geothermal, supported by $958M in targeted grants. This is cheaper than LNG and creates permanent energy cost reductions.</p>
+</div>
+<div class="expand-content border-2 border-black border-t-0 p-8 bg-gray-50" id="f3">
+<h4 class="font-bold text-lg mb-3">Faultline 03: The Missing Market</h4>
+<p class="font-light leading-relaxed mb-4">New Zealand lacks an exchange-listed market for long-term, firm electricity contracts. Businesses that need price certainty—data centres, manufacturers, exporters—cannot hedge their exposure.</p>
+<p class="font-light leading-relaxed mb-4">This isn't a fuel problem; it's a market design problem. No amount of LNG fixes it. What's needed is a neutral entity or mandatory trigger mechanism to create firm-energy contracts.</p>
+<p class="font-light leading-relaxed"><strong>The real solution:</strong> Establish an exchange-traded firm-energy contract market, potentially with mandatory participation triggers, so businesses can manage risk regardless of fuel source.</p>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 border-b-2 border-black bg-black text-white fade-section" id="numbers">
+<div class="max-w-5xl mx-auto">
+<p class="text-xs font-bold tracking-widest uppercase mb-4 text-accent">03 / The Numbers</p>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-16">
+                THE FACTS<br/>DON'T LIE.
+            </h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+<div class="border-l-2 border-accent pl-6">
+<p class="stat-number text-4xl md:text-5xl font-black text-accent">$800</p>
+<p class="text-xs font-bold tracking-widest uppercase mt-2">/MWh Peak Price</p>
+<p class="text-sm font-light mt-1 text-gray-400">August 2024 wholesale electricity</p>
+</div>
+<div class="border-l-2 border-accent pl-6">
+<p class="stat-number text-4xl md:text-5xl font-black text-accent">731</p>
+<p class="text-xs font-bold tracking-widest uppercase mt-2">Petajoules Remaining</p>
+<p class="text-sm font-light mt-1 text-gray-400">Domestic gas reserves</p>
+</div>
+<div class="border-l-2 border-accent pl-6">
+<p class="stat-number text-4xl md:text-5xl font-black text-accent">109</p>
+<p class="text-xs font-bold tracking-widest uppercase mt-2">PJ Recently Lost</p>
+<p class="text-sm font-light mt-1 text-gray-400">Reserve downward revisions</p>
+</div>
+<div class="border-l-2 border-white pl-6">
+<p class="stat-number text-4xl md:text-5xl font-black">55</p>
+<p class="text-xs font-bold tracking-widest uppercase mt-2">PJ / Year</p>
+<p class="text-sm font-light mt-1 text-gray-400">Industrial gas for process heat</p>
+</div>
+<div class="border-l-2 border-white pl-6">
+<p class="stat-number text-4xl md:text-5xl font-black">88%</p>
+<p class="text-xs font-bold tracking-widest uppercase mt-2">No Grid Upgrade</p>
+<p class="text-sm font-light mt-1 text-gray-400">Electrification projects ready now</p>
+</div>
+<div class="border-l-2 border-white pl-6">
+<p class="stat-number text-4xl md:text-5xl font-black">$900M</p>
+<p class="text-xs font-bold tracking-widest uppercase mt-2">Cheaper</p>
+<p class="text-sm font-light mt-1 text-gray-400">Diesel + renewables vs LNG by 2033</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 border-b-2 border-black fade-section" id="compare">
+<div class="max-w-5xl mx-auto">
+<p class="text-xs font-bold tracking-widest uppercase mb-4 text-accent">04 / The Comparison</p>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
+                LNG VS THE<br/>ALTERNATIVES.
+            </h2>
+<p class="text-lg font-light max-w-2xl mb-12">
+                Side by side, the case against LNG is overwhelming. It's slower, more expensive, and doesn't solve the underlying problems.
+            </p>
+<div class="w-full mb-12 border-2 border-black p-6" id="costChart" style="min-height:350px;"></div>
+<div class="border-2 border-black">
+<div class="grid grid-cols-4 text-xs font-bold tracking-widest uppercase border-b-2 border-black">
+<div class="p-4 border-r-2 border-black bg-black text-white">Criteria</div>
+<div class="p-4 border-r-2 border-black bg-black text-white">LNG Import</div>
+<div class="p-4 border-r-2 border-black bg-black text-white">Diesel Bridge</div>
+<div class="p-4 bg-black text-white">Renewables</div>
+</div>
+<div class="comparison-row grid grid-cols-4 text-sm border-b border-gray-200">
+<div class="p-4 font-bold border-r border-gray-200">Timeline</div>
+<div class="p-4 border-r border-gray-200 font-light">5–7 years</div>
+<div class="p-4 border-r border-gray-200 font-light">1–2 years</div>
+<div class="p-4 font-light">3–5 years</div>
+</div>
+<div class="comparison-row grid grid-cols-4 text-sm border-b border-gray-200">
+<div class="p-4 font-bold border-r border-gray-200">Capital Cost</div>
+<div class="p-4 border-r border-gray-200 font-light">$1.5–3B+ (terminal)</div>
+<div class="p-4 border-r border-gray-200 font-light">~$100M (conversion)</div>
+<div class="p-4 font-light">$2.6B (800MW wind)</div>
+</div>
+<div class="comparison-row grid grid-cols-4 text-sm border-b border-gray-200">
+<div class="p-4 font-bold border-r border-gray-200">Fuel Cost</div>
+<div class="p-4 border-r border-gray-200 font-light text-accent font-bold">$25–35/GJ (volatile)</div>
+<div class="p-4 border-r border-gray-200 font-light">$20–30/GJ (known)</div>
+<div class="p-4 font-light text-green-700 font-bold">$0 (free fuel)</div>
+</div>
+<div class="comparison-row grid grid-cols-4 text-sm border-b border-gray-200">
+<div class="p-4 font-bold border-r border-gray-200">Emissions</div>
+<div class="p-4 border-r border-gray-200 font-light text-accent font-bold">High (fossil fuel)</div>
+<div class="p-4 border-r border-gray-200 font-light">High but temporary</div>
+<div class="p-4 font-light text-green-700 font-bold">Zero</div>
+</div>
+<div class="comparison-row grid grid-cols-4 text-sm border-b border-gray-200">
+<div class="p-4 font-bold border-r border-gray-200">Dry Year Fix</div>
+<div class="p-4 border-r border-gray-200 font-light">Partial</div>
+<div class="p-4 border-r border-gray-200 font-light">Yes (bridge)</div>
+<div class="p-4 font-light font-bold">Yes (permanent)</div>
+</div>
+<div class="comparison-row grid grid-cols-4 text-sm border-b border-gray-200">
+<div class="p-4 font-bold border-r border-gray-200">Fixes Faultline 2?</div>
+<div class="p-4 border-r border-gray-200 font-light text-accent font-bold">No—delays transition</div>
+<div class="p-4 border-r border-gray-200 font-light">No—but buys time</div>
+<div class="p-4 font-light text-green-700 font-bold">Yes—enables switching</div>
+</div>
+<div class="comparison-row grid grid-cols-4 text-sm">
+<div class="p-4 font-bold border-r border-gray-200">Fixes Faultline 3?</div>
+<div class="p-4 border-r border-gray-200 font-light text-accent font-bold">No</div>
+<div class="p-4 border-r border-gray-200 font-light text-accent font-bold">No</div>
+<div class="p-4 font-light text-accent font-bold">No (needs market reform)</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 border-b-2 border-black fade-section" id="solutions">
+<div class="max-w-5xl mx-auto">
+<p class="text-xs font-bold tracking-widest uppercase mb-4 text-accent">05 / The Better Path</p>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
+                WHAT SHOULD<br/>HAPPEN INSTEAD.
+            </h2>
+<p class="text-lg font-light max-w-2xl mb-16">
+                The Sapere report outlines a three-part strategy that's faster, cheaper, and actually solves all three faultlines.
+            </p>
+<div class="space-y-0">
+<div class="border-2 border-black p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<p class="text-6xl md:text-7xl font-black text-accent">A</p>
+</div>
+<div>
+<p class="text-xs font-bold tracking-widest uppercase mb-2">Short Term · 2025–2028</p>
+<h3 class="text-2xl md:text-3xl font-bold mb-4">DIESEL AS A BRIDGE FUEL</h3>
+<p class="font-light leading-relaxed mb-4">Convert existing gas peaker plants to dual-fuel capability. This can be done in 1–2 years at minimal cost (~$100M). Diesel is more expensive per unit than gas, but it's available immediately, has reliable global supply chains, and requires no new import infrastructure.</p>
+<p class="font-light leading-relaxed">Diesel peakers would only run during genuine dry-year emergencies—perhaps a few hundred hours per year. The total fuel cost is manageable and acts as insurance, not baseload generation.</p>
+</div>
+</div>
+<div class="border-2 border-black border-t-0 p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start bg-gray-50">
+<div class="flex-shrink-0">
+<p class="text-6xl md:text-7xl font-black text-accent">B</p>
+</div>
+<div>
+<p class="text-xs font-bold tracking-widest uppercase mb-2">Medium Term · 2026–2033</p>
+<h3 class="text-2xl md:text-3xl font-bold mb-4">RENEWABLE OVERBUILD FOR DRY YEARS</h3>
+<p class="font-light leading-relaxed mb-4">Build approximately 800MW of new wind generation specifically designed to provide firm energy during dry years. The capital cost is around $2.6 billion, but the fuel cost is zero—forever.</p>
+<p class="font-light leading-relaxed">By 2033, this combination of diesel bridge + renewables is approximately <strong class="font-bold">$900 million cheaper</strong> than the LNG pathway, while also reducing emissions and eliminating dependence on volatile international gas markets.</p>
+</div>
+</div>
+<div class="border-2 border-black border-t-0 p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<p class="text-6xl md:text-7xl font-black text-accent">C</p>
+</div>
+<div>
+<p class="text-xs font-bold tracking-widest uppercase mb-2">Parallel Track · 2025–2035</p>
+<h3 class="text-2xl md:text-3xl font-bold mb-4">ACCELERATE INDUSTRIAL FUEL SWITCHING</h3>
+<p class="font-light leading-relaxed mb-4">Provide $958 million in targeted grants to help industrial users switch from gas to electricity, biomass, or geothermal for process heat. 88% of electrification projects need no network upgrades.</p>
+<p class="font-light leading-relaxed">This directly addresses Faultline 2—industrial gas dependency—which LNG would actually worsen by encouraging continued reliance on fossil fuels.</p>
+</div>
+</div>
+<div class="border-2 border-black border-t-0 p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start bg-black text-white">
+<div class="flex-shrink-0">
+<p class="text-6xl md:text-7xl font-black text-accent">+</p>
+</div>
+<div>
+<p class="text-xs font-bold tracking-widest uppercase mb-2">Structural Reform</p>
+<h3 class="text-2xl md:text-3xl font-bold mb-4">CREATE A FIRM-ENERGY CONTRACT MARKET</h3>
+<p class="font-light leading-relaxed mb-4 text-gray-300">Establish an exchange-traded market for long-term, firm-priced electricity contracts. This is a market design fix that no fuel choice—LNG or otherwise—can substitute for.</p>
+<p class="font-light leading-relaxed text-gray-300">Without this, businesses will remain exposed to spot market volatility regardless of how electricity is generated.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 border-b-2 border-black bg-accent text-white fade-section">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-8">
+                LNG DOESN'T FIX<br/>ANY OF THE THREE<br/>FAULTLINES WELL.
+            </h2>
+<p class="text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                It partially addresses dry-year firming (Faultline 1) but at far higher cost than alternatives. It actively worsens industrial gas dependency (Faultline 2). And it does nothing for the missing contract market (Faultline 3).
+            </p>
+</div>
+</section>
+<section class="py-24 px-6 border-b-2 border-black fade-section" id="timeline">
+<div class="max-w-5xl mx-auto">
+<p class="text-xs font-bold tracking-widest uppercase mb-4 text-accent">06 / The Timeline</p>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-12">
+                TIME IS THE<br/>CRITICAL FACTOR.
+            </h2>
+<div class="w-full border-2 border-black p-6" id="timelineViz" style="min-height:280px;"></div>
+<p class="text-sm font-light mt-4 text-gray-500">LNG requires 5–7 years to build import infrastructure. Diesel conversion takes 1–2 years. Renewables take 3–5 years. The next dry year could come anytime.</p>
+</div>
+</section>
+<section class="py-24 px-6 border-b-2 border-black fade-section" id="sources">
+<div class="max-w-5xl mx-auto">
+<p class="text-xs font-bold tracking-widest uppercase mb-4 text-accent">07 / Sources</p>
+<h2 class="text-4xl sm:text-5xl font-black leading-tight mb-8">
+                READ THE<br/>EVIDENCE.
+            </h2>
+<div class="space-y-4">
+<a class="block border-2 border-black p-6 hover:bg-black hover:text-white transition-all duration-300 group" href="https://github.com/frasay/gasisstupid/blob/main/Why%20the%20LNG%20Plan%20Makes%20No%20Sense/assets/Sapere%20From%20Faultlines%20to%20Resilience%20-%20EMBARGOED.pdf" target="_blank">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-bold text-lg">Sapere: From Faultlines to Resilience</p>
+<p class="font-light text-sm mt-1">Full independent report · June 2026</p>
+</div>
+<i class="fas fa-arrow-right text-2xl group-hover:translate-x-2 transition-transform duration-300"></i>
+</div>
+</a>
+<a class="block border-2 border-black p-6 hover:bg-black hover:text-white transition-all duration-300 group" href="https://github.com/frasay/gasisstupid/blob/main/Why%20the%20LNG%20Plan%20Makes%20No%20Sense/assets/Rewiring%20Technical%20explainer%20-%20a%20better%20alternative%20to%20LNG.pdf" target="_blank">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-bold text-lg">Rewiring Aotearoa: Technical Explainer</p>
+<p class="font-light text-sm mt-1">A better alternative to LNG · 2026</p>
+</div>
+<i class="fas fa-arrow-right text-2xl group-hover:translate-x-2 transition-transform duration-300"></i>
+</div>
+</a>
+</div>
+</div>
+</section>
+<footer class="py-16 px-6 bg-black text-white">
+<div class="max-w-5xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8">
+<div>
+<p class="text-2xl font-black mb-2">LNG<span class="text-accent">?</span> NO.</p>
+<p class="text-sm font-light text-gray-400">Based on independent research by Sapere Research Group<br/>for Rewiring Aotearoa. June 2026.</p>
+</div>
+<div class="text-sm font-light text-gray-400">
+<p>This website presents findings from publicly available reports.</p>
+<p class="mt-1">All data sourced from Sapere and Rewiring Aotearoa publications.</p>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-800 text-xs text-gray-600 font-light">
+<p>© 2026 · Educational resource · Not financial or policy advice</p>
+</div>
+</div>
+</footer>
+<script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        function toggleExpand(id) {
+            var el = document.getElementById(id);
+            el.classList.toggle('open');
+        }
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-section').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        function drawPriceChart() {
+            var container = document.getElementById('priceChart');
+            var w = container.clientWidth - 32;
+            var h = 280;
+            var margin = { top: 20, right: 20, bottom: 40, left: 60 };
+
+            var data = [
+                { month: 'Jan', price: 85 },
+                { month: 'Feb', price: 90 },
+                { month: 'Mar', price: 95 },
+                { month: 'Apr', price: 110 },
+                { month: 'May', price: 150 },
+                { month: 'Jun', price: 280 },
+                { month: 'Jul', price: 520 },
+                { month: 'Aug', price: 800 },
+                { month: 'Sep', price: 450 },
+                { month: 'Oct', price: 200 },
+                { month: 'Nov', price: 140 },
+                { month: 'Dec', price: 110 }
+            ];
+
+            container.innerHTML = '';
+            var svg = d3.select('#priceChart').append('svg').attr('width', w).attr('height', h);
+
+            var x = d3.scaleBand().domain(data.map(function(d) { return d.month; })).range([margin.left, w - margin.right]).padding(0.3);
+            var y = d3.scaleLinear().domain([0, 900]).range([h - margin.bottom, margin.top]);
+
+            svg.selectAll('rect').data(data).enter().append('rect')
+                .attr('x', function(d) { return x(d.month); })
+                .attr('y', function(d) { return y(d.price); })
+                .attr('width', x.bandwidth())
+                .attr('height', function(d) { return h - margin.bottom - y(d.price); })
+                .attr('fill', function(d) { return d.price >= 500 ? '#dc2626' : '#000'; });
+
+            svg.append('g')
+                .attr('transform', 'translate(0,' + (h - margin.bottom) + ')')
+                .call(d3.axisBottom(x))
+                .selectAll('text').style('font-size', '10px').style('font-family', 'Inter, sans-serif');
+
+            svg.append('g')
+                .attr('transform', 'translate(' + margin.left + ',0)')
+                .call(d3.axisLeft(y).ticks(5).tickFormat(function(d) { return '$' + d; }))
+                .selectAll('text').style('font-size', '10px').style('font-family', 'Inter, sans-serif');
+
+            svg.append('text')
+                .attr('x', x('Aug') + x.bandwidth() / 2)
+                .attr('y', y(800) - 8)
+                .attr('text-anchor', 'middle')
+                .style('font-size', '11px')
+                .style('font-weight', '700')
+                .style('fill', '#dc2626')
+                .text('$800/MWh');
+        }
+
+        function drawCostChart() {
+            var container = document.getElementById('costChart');
+            var w = container.clientWidth - 48;
+            var h = 300;
+            var margin = { top: 30, right: 20, bottom: 50, left: 80 };
+
+            var data = [
+                { option: 'LNG Import', cost: 3800, color: '#dc2626' },
+                { option: 'Diesel + Renewables', cost: 2900, color: '#000000' }
+            ];
+
+            container.innerHTML = '';
+            var svg = d3.select('#costChart').append('svg').attr('width', w).attr('height', h);
+
+            var x = d3.scaleBand().domain(data.map(function(d) { return d.option; })).range([margin.left, w - margin.right]).padding(0.4);
+            var y = d3.scaleLinear().domain([0, 4500]).range([h - margin.bottom, margin.top]);
+
+            svg.selectAll('rect').data(data).enter().append('rect')
+                .attr('x', function(d) { return x(d.option); })
+                .attr('y', function(d) { return y(d.cost); })
+                .attr('width', x.bandwidth())
+                .attr('height', function(d) { return h - margin.bottom - y(d.cost); })
+                .attr('fill', function(d) { return d.color; });
+
+            svg.selectAll('.label').data(data).enter().append('text')
+                .attr('x', function(d) { return x(d.option) + x.bandwidth() / 2; })
+                .attr('y', function(d) { return y(d.cost) - 10; })
+                .attr('text-anchor', 'middle')
+                .style('font-size', '14px')
+                .style('font-weight', '900')
+                .style('fill', function(d) { return d.color; })
+                .text(function(d) { return '~$' + (d.cost / 1000).toFixed(1) + 'B'; });
+
+            svg.append('g')
+                .attr('transform', 'translate(0,' + (h - margin.bottom) + ')')
+                .call(d3.axisBottom(x))
+                .selectAll('text').style('font-size', '12px').style('font-weight', '700').style('font-family', 'Inter, sans-serif');
+
+            svg.append('g')
+                .attr('transform', 'translate(' + margin.left + ',0)')
+                .call(d3.axisLeft(y).ticks(5).tickFormat(function(d) { return '$' + d + 'M'; }))
+                .selectAll('text').style('font-size', '10px').style('font-family', 'Inter, sans-serif');
+
+            var savingsY = y(3350);
+            svg.append('line')
+                .attr('x1', x('LNG Import') + x.bandwidth() + 10)
+                .attr('x2', x('Diesel + Renewables') - 10)
+                .attr('y1', savingsY).attr('y2', savingsY)
+                .attr('stroke', '#dc2626').attr('stroke-width', 2).attr('stroke-dasharray', '4,4');
+
+            svg.append('text')
+                .attr('x', (x('LNG Import') + x.bandwidth() + x('Diesel + Renewables')) / 2)
+                .attr('y', savingsY - 10)
+                .attr('text-anchor', 'middle')
+                .style('font-size', '12px').style('font-weight', '900').style('fill', '#dc2626')
+                .text('~$900M SAVINGS');
+        }
+
+        function drawTimeline() {
+            var container = document.getElementById('timelineViz');
+            var w = container.clientWidth - 48;
+            var h = 220;
+            var margin = { top: 30, right: 20, bottom: 40, left: 20 };
+
+            container.innerHTML = '';
+            var svg = d3.select('#timelineViz').append('svg').attr('width', w).attr('height', h);
+
+            var x = d3.scaleLinear().domain([2025, 2035]).range([margin.left + 120, w - margin.right]);
+
+            var bars = [
+                { label: 'DIESEL BRIDGE', start: 2025, end: 2027, y: 30, color: '#000' },
+                { label: 'RENEWABLES', start: 2026, end: 2031, y: 80, color: '#000' },
+                { label: 'FUEL SWITCHING', start: 2025, end: 2035, y: 130, color: '#000' },
+                { label: 'LNG (IF PURSUED)', start: 2025, end: 2032, y: 180, color: '#dc2626' }
+            ];
+
+            bars.forEach(function(b) {
+                svg.append('rect')
+                    .attr('x', x(b.start))
+                    .attr('y', b.y - 12)
+                    .attr('width', x(b.end) - x(b.start))
+                    .attr('height', 24)
+                    .attr('fill', b.color)
+                    .attr('opacity', b.color === '#dc2626' ? 0.3 : 1);
+
+                svg.append('text')
+                    .attr('x', x(b.start) - 5)
+                    .attr('y', b.y + 4)
+                    .attr('text-anchor', 'end')
+                    .style('font-size', '8px')
+                    .style('font-weight', '700')
+                    .style('letter-spacing', '0.05em')
+                    .text(b.label);
+
+                svg.append('text')
+                    .attr('x', x(b.start) + 6)
+                    .attr('y', b.y + 4)
+                    .style('font-size', '10px')
+                    .style('font-weight', '700')
+                    .style('fill', b.color === '#dc2626' ? '#dc2626' : '#fff')
+                    .text(b.start + '–' + b.end);
+            });
+
+            var years = [2025, 2027, 2029, 2031, 2033, 2035];
+            years.forEach(function(yr) {
+                svg.append('line')
+                    .attr('x1', x(yr)).attr('x2', x(yr))
+                    .attr('y1', 10).attr('y2', h - 10)
+                    .attr('stroke', '#e5e5e5').attr('stroke-width', 1);
+
+                svg.append('text')
+                    .attr('x', x(yr)).attr('y', h - 2)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '10px').style('fill', '#999')
+                    .text(yr);
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            drawPriceChart();
+            drawCostChart();
+            drawTimeline();
+        });
+
+        window.addEventListener('resize', function() {
+            drawPriceChart();
+            drawCostChart();
+            drawTimeline();
+        });
+    </script>
+</body>
+</html>
